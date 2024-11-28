@@ -1,0 +1,139 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.progress-bar {
+    background-color: #ff0000;
+}
+
+.btn-quiz {
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-quiz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.pulse-animation {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.question-title {
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+#options-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-header {
+    background-color: #333;
+    color: white;
+}
+
+.modal-body {
+    background-color: #222;
+    color: #fff;
+}
+
+:root {
+    --slipknot-red: #ff0000;
+    --slipknot-black: #121212;
+    --text-color: #ffffff;
+}
+
+.quiz-background {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+        url('../Img/landingghost.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    position: relative;
+}
+
+.btn-quiz {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-quiz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.question-title {
+    color: var(--slipknot-red);
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+.btn-danger {
+    background-color: var(--slipknot-red) !important;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 15px;
+    }
+}

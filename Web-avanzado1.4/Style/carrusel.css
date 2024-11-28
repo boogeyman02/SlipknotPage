@@ -1,0 +1,211 @@
+/* carrusel */
+:root {
+    --all-transition: 1s ease;
+    --opacity-transition: .3s ease;
+}
+
+.carousel-container {
+width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-box {
+    left: -72%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1300px;
+    height: 1300px;
+}
+
+.img-box .img-list {
+    height: inherit;
+    transform: rotate(-120deg);
+}
+
+.img-list .img-slider {
+    height: inherit;
+    transition: var(--all-transition);
+}
+
+.img-slider .img-item {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(calc(-360deg / 6 * var(--i))) scale(.8);
+    transform-origin: 650px;
+    transition: var(--all-transition);
+}
+
+.img-slider .img-item.active {
+    transform: translateY(-50%) rotate(calc(-360deg / 6 * var(--i))) scale(0.9) translateX(-65%);
+    z-index: 1;
+}
+
+.img-item .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--all-transition);
+}
+
+.img-item .item img {
+    transform: rotate(calc(360deg / 6 * var(--i))) rotate(120deg);
+    filter: blur(8px);
+    transition: var(--all-transition);
+}
+
+.img-item.active .item img {
+    filter: blur(0);
+}
+
+.info-box {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+}
+
+.info-box .info-item {
+    background-color: rgba(0, 0, 0, 0.704);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px 0 0 40px;
+    padding: 0 70px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    opacity: 0;
+    box-shadow: none;
+    transition: transform var(--all-transition), opacity var(--opacity-transition), box-shadow var(--all-transition);
+}
+
+.info-box .info-item.active {
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.637);
+}
+
+.navigation {
+    position: absolute;
+    left: 23%;
+    bottom: 7%;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navigation span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,.2);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+.carruselimg{
+    border-radius: 50%;
+    background: rgba(11, 1, 1, 0.614);
+    
+}
+.info-box .info-item {
+    background: linear-gradient(145deg, rgba(0,0,0,0.8), rgba(0,0,0,0.95));
+    backdrop-filter: blur(10px);
+}
+
+.album-details {
+    margin-top: 20px;
+}
+
+.album-stats {
+    display: flex;
+    gap: 20px;
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.album-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.listen-btn {
+    background: #1DB954;
+    color: white;
+}
+
+.listen-btn:hover {
+    background: #1ed760;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.more-btn {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.more-btn:hover {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.album-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+#slipknot-logo {
+    max-height: 80px; /* Ajusta la altura máxima del logo */
+    width: auto; /* Mantiene la proporción original */
+    object-fit: contain; /* Asegura que no se deforme */
+}
+/* header */
+header{
+    background: linear-gradient(to bottom, rgba(0, 0, 0.2, 1), rgba(0, 0, 0, 0.885), rgba(0, 0, 0, 0.737), rgba(0, 0, 0, 0));
+    padding: 4rem 0;
+    position: relative;
+}
